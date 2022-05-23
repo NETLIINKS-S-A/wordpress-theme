@@ -112,16 +112,16 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	--orange-900: #7c2d12;
 
 	/* AMBER */
-	--color-50: #fffbec;
-	--color-100: #fef3c7;
-	--color-200: #fde68a;
-	--color-300: #fbd34c;
-	--color-400: #fbbf24;
-	--color-500: #f59e0c;
-	--color-600: #d97707;
-	--color-700: #b4540a;
-	--color-800: #92400d;
-	--color-900: #78350f;
+	--amber-50: #fffbec;
+	--amber-100: #fef3c7;
+	--amber-200: #fde68a;
+	--amber-300: #fbd34c;
+	--amber-400: #fbbf24;
+	--amber-500: #f59e0c;
+	--amber-600: #d97707;
+	--amber-700: #b4540a;
+	--amber-800: #92400d;
+	--amber-900: #78350f;
 
 	/* yellow */
 	--yellow-50: #fefce8;
@@ -907,20 +907,7 @@ hr {
 	text-align: center;
 }
 
-/* BREAKPOINTS */
-/*
-	DESKTOP:
-		1328px
-		1024px
-	
-	TABLET:
-		960px
-		768px
-	
-	MOBILE:
-		480px
-		320px
-*/
+
 @media screen and (max-width: 1328px) {
 	/* Default values */
 	.container {
@@ -1021,4 +1008,66 @@ hr {
 	.navbar__responsive--button {
 		display: block;
 	}
+}
+
+/*
+######                                                        
+#     #   ##   #####  #    #    #    #  ####  #####  ######   
+#     #  #  #  #    # #   #     ##  ## #    # #    # #        
+#     # #    # #    # ####      # ## # #    # #    # #####    
+#     # ###### #####  #  #      #    # #    # #    # #        
+#     # #    # #   #  #   #     #    # #    # #    # #        
+######  #    # #    # #    #    #    #  ####  #####  ###### */
+
+.isDark body {
+	background-color: var(--neutral-900);
+}
+
+.isDark h1,
+.isDark h2,
+.isDark h3,
+.isDark h4,
+.isDark h5,
+.isDark h6 {
+ color: var(--neutral-50);
+}
+
+.isDark p {
+	color: var(--neutral-200);
+}
+
+.isDark .container-tinted {
+	background-color: var(--neutral-800);
+}
+
+.isDark .navbar {
+	background-color: var(--teal-700);
+}
+
+/* DARK */
+.isDark .footer-icon-light {
+	display: none;
+}
+
+.isDark .footer-icon-dark {
+	display: block !important;
+}
+
+/**/ .footer-icon-dark { display: none !important; } /**/
+
+.isDark .foo {
+	background-color: var(--neutral-800);
+}
+
+.isDark .foo span p {
+	color: var(--neutral-100);
+}
+
+.isDark .foo .foo-bar a {
+	color: var(--neutral-50);
+}
+
+
+.entry-meta, .entry-footer {
+	display: none !important;
 }
