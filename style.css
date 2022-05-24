@@ -22,9 +22,9 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
-/*	╔═════════════════╗
-	║ ROOT            ║
-	╚═════════════════╝ */
+/**
+* variables
+*/
 
 :root {
 	/* SLATE */
@@ -360,6 +360,10 @@ p {
   line-height: var(--leading-6);
 }
 
+/**
+* ! no estoy seguro de si funciona o no el text-align en el proyecto
+*/
+
 /*╔════════════════════════╗
 	║ text align             ║
 	╚════════════════════════╝ */
@@ -367,9 +371,7 @@ p {
 .text-align-center 	{ text-align: center; }
 .text-align-right 	{ text-align: right; }
 
-/*╔════════════════════════╗
-	║ text alignment         ║
-	╚════════════════════════╝ */
+/* ! determinar cuál de estas clases no está trabajando */
 .horizontal-align {
   display: flex;
 	align-items: center;
@@ -402,9 +404,7 @@ hr {
   text-align: center;
 }
 
-/*╔════════════════════════╗
-	║ header style           ║
-	╚════════════════════════╝ */
+/* * Estilos del encabezado */
 .header {
 	display: flex;
 	align-items: center;
@@ -460,9 +460,7 @@ hr {
 	margin: 0 auto 40px auto;
 }
 
-/*╔════════════════════════╗
-	║ navbar                 ║
-	╚════════════════════════╝ */
+/* navbar */
 .navbar {
 	display: block;
 	position: sticky;
@@ -470,6 +468,12 @@ hr {
 	left: 0;
 	z-index: 9999;
 	box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+	background-color: #15b8a6;
+	color: var(--white);
+}
+
+.navbar a, .navbar h1, .navbar h2 {
+	color: var(--white);
 }
 
 .navbar__container {
@@ -483,14 +487,37 @@ hr {
 	text-decoration: none;
 	list-style: none;
 }
-
-.navbar__right li {
+div.menu ul {
 	display: inline-block;
+	padding: 0;
+	margin: 0;
+}
+
+div.menu a {
+	padding: 0 !important;
+	margin: 0;
+}
+
+
+.navbar__right {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-right: 12px;
+}
+
+svg.feather.feather-moon.moon {
+	height: 16px;
+}
+
+a.toggle__darkmode {
+	padding-left: 10px;
+	cursor: pointer;
 }
 
 .navbar__right li a {
 	display: block;
-	padding: var(--p-3);
+	padding: 0;
 }
 
 .navbar__left {
@@ -522,9 +549,26 @@ hr {
 	display: inline-block !important;
 }
 
-/*╔════════════════════════╗
-	║ show navbar on toggle  ║
-	╚════════════════════════╝ */
+/*
+	DIV
+		id: primary menu
+		class: menu
+		UL
+			LI
+				class: page_item page-item-2
+				A
+*/
+
+div.menu {
+	padding: 0;
+}
+
+div.menu ul {
+	list-style-type: none;
+}
+
+
+/* show navbar when toggle button */
 	.isShow {
 		display: flex !important;
 		flex-direction: column;
@@ -553,9 +597,7 @@ hr {
 		text-transform: uppercase;
 	}
 
-/*╔════════════════════════╗
-	║ anicon                 ║
-	╚════════════════════════╝ */
+/* the responsive navbar menu icon */
 .anicon {
 	font-family: 'Anicons Regular';
 	font-size: var(--text-3xl);
@@ -571,15 +613,7 @@ hr {
 	right: 20px;
 }
 
-.teal {
-	color: var(--white);
-	background-color: #15b8a6;
-	text-decoration: none;
-}
 
-.teal a, .teal h1, .teal h2 {
-	color: var(--white);
-}
 
 /*
 ╔═════════════════╗

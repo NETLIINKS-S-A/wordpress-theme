@@ -67,7 +67,7 @@
 	</header><!-- #masthead -->
 	
 
-	<nav class="navbar teal">
+	<nav class="navbar">
 		<div class="navbar__container">
 			<u class="navbar__left">
 					<li><a href="<?php echo esc_url( home_url( '/')); ?>" class="navbar__brand">Netliinks</a></li>
@@ -87,7 +87,7 @@
 					);
 				?>
 
-				<?php echo '<li><a id="toggle-theme" class="moon"><i data-feather="moon" class="moon">toggle</i></a></li>';?>
+				<?php echo '<a id="toggle-theme" class="toggle__darkmode"><i data-feather="moon" class="moon">toggle</i></a>';?>
 
 			</ul>
 
