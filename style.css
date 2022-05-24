@@ -753,7 +753,8 @@ div.menu ul {
 }
 
 .copyright a {
-	color: var(--orange-600);
+	color: #FBAF29;
+	font-weight: bolder !important;
 }
 
 
@@ -1104,4 +1105,8 @@ hr {
 
 .entry-meta, .entry-footer {
 	display: none !important;
+}
+
+div.entry-header {
+	background-color: red !important;
 }

@@ -23,13 +23,13 @@
   <!-- Bookmark prevew -->
   <meta property="og:title" content="NETLIINKS S.A. | Networking & Security">
   <meta property="og:description" content="Offering our services for infividual or groups.">
-  <meta property="og:image", content="img/prev_bookmark.png">
+  <meta property="og:image" content="img/prev_bookmark.png">
   <meta property="og:url" content="https//www.netliinks.ml">
 
   <!-- Twitter bookmark prevew -->
   <meta property="twitter:title" content="NETLIINKS S.A. | Networking & Security">
   <meta property="twitter:description" content="Offering our services for infividual or groups.">
-  <meta property="twitter:image", content="img/prev_bookmark.png">
+  <meta property="twitter:image" content="img/prev_bookmark.png">
   <meta property="twitter:card" content="summary_large_image">
 	
 	<link rel="profile" href="https://gmpg.org/xfn/11">
@@ -46,7 +46,7 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', '_s' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'netliinks' ); ?></a>
 
 	<header id="masthead" class="header header-index">
 		<div class="container">
