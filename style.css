@@ -639,6 +639,74 @@ div.menu ul {
 	border-radius: 10px;
 }
 
+.t-blocks {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 10px;
+}
+
+.block {
+	display: block;
+  position: relative;
+  padding: 32pt;
+  border-radius: 10px;
+  background-color: var(--neutral-200);
+  overflow: hidden;
+  text-align: center;
+}
+
+.block img {
+	display: block;
+	width: 100%;
+	max-width: 300px;
+	position: absolute;
+	top: 160px;
+	left: 50%;
+	right: 50%;
+	transform: translateX(-50%);
+	justify-self: center;
+	align-self: center;
+}
+
+.dark-bg {
+	background-color: var(--neutral-800);
+}
+
+.dark-bg h1,
+.dark-bg h2,
+.dark-bg h3,
+.dark-bg h4,
+.dark-bg h5,
+.dark-bg h6 {
+	color: var(--neutral-200);
+}
+
+.dark-bg p {
+	color: var(--neutral-400);
+}
+
+.primary-bg {
+	background-color: var(--teal-500);
+}
+
+.primary-bg h1,
+.primary-bg h2,
+.primary-bg h3,
+.primary-bg h4,
+.primary-bg h5,
+.primary-bg h6 {
+	color: var(--neutral-100);
+}
+
+.primary-bg p {
+	color: var(--neutral-100);
+}
+
+.placeholder-img {
+	display: block;
+	padding-bottom: 20pt;
+}
+
 /*
 ╔═════════════════╗
 ║ Grid            ║
@@ -650,11 +718,6 @@ div.menu ul {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-gap: 35pt;
-}
-
-.gird-2 img {
-	width: 100%;
-	border-radius: 5px !important;
 }
 
 .grid-2 h1,
