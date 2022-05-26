@@ -69,26 +69,20 @@
 
 	<nav class="navbar">
 		<div class="navbar__container">
-			<u class="navbar__left">
-					<li><a href="<?php echo esc_url( home_url( '/')); ?>" class="navbar__brand">Netliinks</a></li>
-			</u>
+			<ul class="navbar__left">
+				<li>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="navbar__logo">
+						NETLIINKS
+					</a>
+				</li>
+			</ul>
 
 			<ul class="navbar__responsive--button">
 				<a href="#" class="anicon" id="show-menu">A</a>
 			</ul>
 
 			<ul class="navbar__right" id="navbar__menu">
-				<?php
-					wp_nav_menu(
-						array(
-							'theme_location' => 'menu-1',
-							'menu_id'        => 'primary-menu',
-						),
-					);
-				?>
-
-				<?php echo '<a id="toggle-theme" class="toggle__darkmode"><i data-feather="moon" class="moon">toggle</i></a>';?>
-
+				<li><a id="toggle-theme" class="toggle__darkmode"><i data-feather="moon" class="moon">toggle</i></a></li>
 			</ul>
 
 		</div>

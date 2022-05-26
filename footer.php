@@ -45,52 +45,53 @@
     </div>
     <script>feather.replace();</script>
     <script>
-      const objs = {
-        document: document.querySelector('html'),
-        toggleDarkMode: document.getElementById('toggle-theme'),
-        navbar: document.getElementById('show-menu'),
-        navbarMenu: document.getElementById('navbar__menu'),
-        menuWrapper: document.getElementById('wrapper-page-min')
+      /**
+       * * Intersect sections to put animations
+      */
+      const section = {
+        section1: document.getElementById('section-1'),
+        section2: document.getElementById('section-2'),
+        section3: document.getElementById('section-3'),
+        section4: document.getElementById('section-4'),
+        section5: document.getElementById('section-5'),
+        section6: document.getElementById('section-6'),
       }
 
-      const $navbar = objs.navbar;
-      const $menu = objs.navbarMenu;
-      const $wrapper = objs.menuWrapper;
+      /**
+       * * loadSection
+       * @params entrys, observer
+      */
+      const loadSection = (entrys, observer)=> {
+        entrys.forEach((entry)=> {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            console.log('entró');
+          } else {
+            entry.target.classList.remove('visible');
+          }
+        })
+      }
 
-      // These objects helps to change the entire theme
-      const $document = objs.document;
-      const $toggleTheme = objs.toggleDarkMode;
-
-      // ===================================================
-      // TOGGLE MENU                                     ===
-      // ===================================================
-      $navbar.addEventListener('click', (e)=> {
-        const $button = $navbar;
-
-        e.preventDefault();
-        $button.classList.toggle('anicon-active');
-        $menu.classList.toggle('isShow');
+      const observer = new IntersectionObserver(loadSection, {
+        root: null,
+        rootMargin: '500px 0px 0px 0px',
+        threshold: 0.5
       });
 
-      // ===================================================
-      // DARKMODE                                        ===
-      // ===================================================
-      $toggleTheme.addEventListener('click', ()=> {
-        $document.classList.toggle('isDark');
+      observer.observe(section.section1);
+      observer.observe(section.section2);
+      observer.observe(section.section3);
+      observer.observe(section.section4);
+      observer.observe(section.section5);
+      observer.observe(section.section6);
+    </script>
 
-        // Save to LocalStorage
-        const isDark = $document.classList.contains('isDark');
-        isDark ? localStorage.setItem('Dark Mode', isDark) : localStorage.setItem('Dark Mode', isDark);
-      })
+    <script>
+      const navbar = document.querySelector('.navbar');
 
-      // Set DarkMode if is storaged
-      const verifyDarkModeStatus = () => {
-        let themeStatus = JSON.parse(localStorage.getItem('Dark Mode'));
-
-        themeStatus ? $document.classList.add('isDark') : $document.classList.remove('isDark');
-      }
-
-      verifyDarkModeStatus();
+      window.addEventListener('scroll', ()=> {
+        navbar.classList.toggle('navbar__toggled', window.scrollY > 50);
+      }) 
     </script>
 
   </footer>
