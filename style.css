@@ -729,7 +729,7 @@ div.grid-3 div.item-3 {
 	align-self: center;
 }
 
-.grid-3 div, .grid__applications a {
+.grid-3 div, .grid__applications a, .prices .card__price {
 	opacity: 0;
 	transform: scale(0.9);
 	-webkit-transform: scale(0.9);
@@ -743,7 +743,7 @@ div.grid-3 div.item-3 {
 	-o-transition: 0.7s ease-in-out all;
 }
 
-.grid-3 .visible, .grid__applications .visible {
+.grid-3 .visible, .grid__applications .visible, .prices .visible {
 	opacity: 1;
 	transform: scale(1) translateX(0);
 	-webkit-transform: scale(1) translateX(0);
@@ -758,7 +758,6 @@ div.grid-3 div.item-3 {
 	width: 100%;
 	max-width: 1139px;
 }
-
 
 .background__teal { background-color: #15b8a6; }
 .background__dark { background-color: #333333; }
@@ -895,11 +894,6 @@ div.entry-header {
 	list-style-type: "- ";
 }
 
-.btn__group {
-	display: block;
-	margin: 20px 0 0 0;
-}
-
 .btn {
 	display: inline-block;
 	padding: 10px 30px;
@@ -939,4 +933,42 @@ div.entry-header {
 .btn__success:active {
 	background-color: var(--green-100);
 	color: var(--green-400);
+}
+
+.btn__invert {
+	background-color: var(--white) !important;
+	color: var(--green-400) !important;
+}
+
+.input__group {
+	display: flex;
+	flex-wrap: nowrap;
+	width: 100%;
+	margin: 20px 0 0 0;
+}
+
+.input {
+	display: inline-block;
+	width: 100%;
+	margin-right: 10px;
+	font-size: 14px;
+	outline: none;
+	padding: 10px 30px 10px 10px;
+	border: 1px transparent;
+	margin-right: 10px;
+	border-radius: 5px;
+	background-color: var(--green-400);
+}
+
+.input:focus {
+	background-color: var(--white);
+	box-shadow: rgba(0, 0, 0, 0.12) 0 3px 7px;
+}
+
+.input::placeholder {
+	color: var(--green-500);
+}
+
+.input:active::placeholder {
+	color: var(--neutral-200) !important;
 }

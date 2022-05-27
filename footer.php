@@ -53,6 +53,8 @@
         fr: document.getElementById('section-4'),
         ft: document.getElementById('section-5'),
         sx: document.getElementById('section-6'),
+        st: document.getElementById('section-7'),
+        et: document.getElementById('section-8')
       }
 
       /* A function that is called when the user scrolls the page. */
@@ -78,13 +80,15 @@
       observer.observe(section.fr);
       observer.observe(section.ft);
       observer.observe(section.sx);
+      observer.observe(section.st);
+      observer.observe(section.et);
     </script>
 
     <script>
       const navbar = document.querySelector('.navbar');
 
       window.addEventListener('scroll', ()=> {
-        navbar.classList.toggle('navbar__toggled', window.scrollY > 50);
+        navbar.classList.toggle('navbar__toggled', window.scrollY > 100);
       }) 
     </script>
 
