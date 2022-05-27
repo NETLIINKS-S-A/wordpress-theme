@@ -10,7 +10,7 @@
  */
 
 ?>
-<!doctype html>
+<!doctype html class="antialiased">
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -63,7 +63,8 @@
 				<?php endif; ?>
 			</div><!-- .site-branding -->
 		</div>
-
+		
+		<a href="#" class="scroll__bottom"><i data-feather="chevron-down"></i></a>
 	</header><!-- #masthead -->
 	
 

@@ -11,12 +11,10 @@
 
 ?>
 
-	<footer class="foo">
-    <div class="container">
-      <div class="horizontal-align space-between margin-t-b-4">
-        <a href="#" class="foo-logo" onclick="window.open('https://play.google.com/store/apps/developer?id=Netliinks')">
-          <img src="https://netliinks.com/wp-content/uploads/2022/05/footer-dark.png" alt="NETLIINKS S.A." class="footer-icon-light">
-
+	<footer class="footer">
+    <div class="footer__container">
+      <div class="margin-t-b-4">
+        <a href="#" class="footer__logo" onclick="window.open('https://play.google.com/store/apps/developer?id=Netliinks')">
           <img src="https://netliinks.com/wp-content/uploads/2022/05/footer-light.png" alt="NETLIINKS S.A." class="footer-icon-dark">
           <span>
             <p>NETLIINKS</p>
@@ -29,7 +27,7 @@
 
       <hr>
 
-      <div class="foo-bar">
+      <div class="footer__navbar">
         <ul>
           <li><a href="#">Inicio</a></li>
           <li><a href="aplicaciones.html">Aplicaciones</a></li>
@@ -39,8 +37,8 @@
 
       <hr>
 
-      <div class="text-center">
-        <p class="copyright">&copy; 2022 NETLIINKS S.A. - Elaborado por <a href="https://github.com/alecastillo96/NETLIINKSSA">SYSMONK</a></p>
+      <div class="footer__copyright">
+        <p class="copyright__content">&copy; 2022 NETLIINKS S.A. - Elaborado por <a href="https://github.com/alecastillo96/NETLIINKSSA">SYSMONK</a></p>
       </div>
     </div>
     <script>feather.replace();</script>
@@ -49,23 +47,19 @@
        * * Intersect sections to put animations
       */
       const section = {
-        section1: document.getElementById('section-1'),
-        section2: document.getElementById('section-2'),
-        section3: document.getElementById('section-3'),
-        section4: document.getElementById('section-4'),
-        section5: document.getElementById('section-5'),
-        section6: document.getElementById('section-6'),
+        f: document.getElementById('section-1'),
+        s: document.getElementById('section-2'),
+        t: document.getElementById('section-3'),
+        fr: document.getElementById('section-4'),
+        ft: document.getElementById('section-5'),
+        sx: document.getElementById('section-6'),
       }
 
-      /**
-       * * loadSection
-       * @params entrys, observer
-      */
+      /* A function that is called when the user scrolls the page. */
       const loadSection = (entrys, observer)=> {
         entrys.forEach((entry)=> {
           if (entry.isIntersecting) {
             entry.target.classList.add('visible');
-            console.log('entró');
           } else {
             entry.target.classList.remove('visible');
           }
@@ -78,12 +72,12 @@
         threshold: 0.5
       });
 
-      observer.observe(section.section1);
-      observer.observe(section.section2);
-      observer.observe(section.section3);
-      observer.observe(section.section4);
-      observer.observe(section.section5);
-      observer.observe(section.section6);
+      observer.observe(section.f);
+      observer.observe(section.s);
+      observer.observe(section.t);
+      observer.observe(section.fr);
+      observer.observe(section.ft);
+      observer.observe(section.sx);
     </script>
 
     <script>

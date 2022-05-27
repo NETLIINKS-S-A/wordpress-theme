@@ -17,6 +17,16 @@ const $wrapper = objs.menuWrapper;
 const $document = objs.document;
 const $toggleTheme = objs.toggleDarkMode;
 
+/**
+ * Capture information when srcoll the page
+ * 
+ * @author Poll Castillo
+ * @version 0.0.2
+ * @event --scroll
+ * 
+ * 
+ * ? for more informaton visit my github
+*/
 const scrollCapture = ()=> {
   window.addEventListener('scroll', (e)=> {
     
@@ -41,9 +51,7 @@ $navbar.addEventListener('click', (e)=> {
   $menu.classList.toggle('isShow');
 });
 
-// ===================================================
-// DARKMODE                                        ===
-// ===================================================
+
 $toggleTheme.addEventListener('click', ()=> {
   $document.classList.toggle('isDark');
 
@@ -53,6 +61,14 @@ $toggleTheme.addEventListener('click', ()=> {
 })
 
 // Set DarkMode if is storaged
+/**
+ * Save darkmode if is on local-storage
+ *
+ * @author Poll Castillo
+ * @version 3.0.9
+ * 
+ * ! Deprecated
+ */
 const verifyDarkModeStatus = () => {
   let themeStatus = JSON.parse(localStorage.getItem('Dark Mode'));
 
@@ -60,3 +76,27 @@ const verifyDarkModeStatus = () => {
 }
 
 verifyDarkModeStatus();
+
+/**
+ * ## loadSection
+ * Load each entry detailed above
+ * 
+ * **author:** _PollCastillo_
+ * 
+ * **type:** arrow function
+ * 
+ * @param **loadSection `(entrys, observer) { ... }`**
+ * @instructions
+ * get entrys and use forEach method to
+ * use each item from section
+*/
+ const loadSection = (entrys, observer)=> {
+  entrys.forEach((entry)=> {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      console.log('entró');
+    } else {
+      entry.target.classList.remove('visible');
+    }
+  })
+}
