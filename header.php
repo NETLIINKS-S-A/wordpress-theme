@@ -64,7 +64,7 @@
 			</div><!-- .site-branding -->
 		</div>
 		
-		<a href="#" class="scroll__bottom"><i data-feather="chevron-down"></i></a>
+		<a href="#servicios" class="scroll__bottom"><i data-feather="chevron-down"></i></a>
 	</header><!-- #masthead -->
 	
 
@@ -79,11 +79,14 @@
 			</ul>
 
 			<ul class="navbar__responsive--button">
-				<a href="#" class="anicon" id="show-menu">A</a>
+				<b class="anicon" id="show-menu">A</b>
 			</ul>
 
 			<ul class="navbar__right" id="navbar__menu">
-				<li><a id="toggle-theme" class="toggle__darkmode"><i data-feather="moon" class="moon">toggle</i></a></li>
+				<li><a href="#servicios">Servicios</a></li>
+				<li><a href="#aplicaciones">Aplicaciones</a></li>
+				<li><a href="#precios">Precios</a></li>
+				<li><a id="toggleTheme" class="toggle__darkmode"><i data-feather="moon" class="moon">toggle</i></a></li>
 			</ul>
 
 		</div>

@@ -43,9 +43,14 @@
     </div>
     <script>feather.replace();</script>
     <script>
-      /**
-       * * Intersect sections to put animations
-      */
+      const DOCUMENT = document.querySelector('body');
+      const NAVBAR = document.querySelector('.navbar');
+      const TOGGLE_MENU = document.getElementById('show-menu');
+      const NAVBAR_MENU = document.querySelector('.navbar__right');
+      const NAVBAR_MENU_LINKS = document.querySelectorAll('.navbar__right a');
+      const THEME_TOGGLE = document.getElementById('toggleTheme');
+      const CONSULTINGPRICE = document.getElementById('consultingPrice');
+
       const section = {
         f: document.getElementById('section-1'),
         s: document.getElementById('section-2'),
@@ -57,7 +62,7 @@
         et: document.getElementById('section-8')
       }
 
-      /* A function that is called when the user scrolls the page. */
+      /* intersecting objects */
       const loadSection = (entrys, observer)=> {
         entrys.forEach((entry)=> {
           if (entry.isIntersecting) {
@@ -67,7 +72,7 @@
           }
         })
       }
-
+      // observer
       const observer = new IntersectionObserver(loadSection, {
         root: null,
         rootMargin: '500px 0px 0px 0px',
@@ -82,14 +87,50 @@
       observer.observe(section.sx);
       observer.observe(section.st);
       observer.observe(section.et);
-    </script>
-
-    <script>
-      const navbar = document.querySelector('.navbar');
-
+      
+      /* animation for navbar */
       window.addEventListener('scroll', ()=> {
-        navbar.classList.toggle('navbar__toggled', window.scrollY > 100);
-      }) 
+        NAVBAR.classList.toggle('navbar__toggled', window.scrollY > 100);
+      });
+      
+      /* on submit may appear a modal with prices */
+      CONSULTINGPRICE.addEventListener('submit', (e)=> {
+        e.preventDefault();
+        alert('debería aparecer la lista de precios en algún lugar');
+      });
+
+      /* toggle color scheme */
+      THEME_TOGGLE.addEventListener('click', ()=> {
+        DOCUMENT.classList.toggle('isDark');
+
+        // save theme status to localstorage
+        const isDark = DOCUMENT.classList.contains('isDark');
+
+        isDark ? localStorage.setItem('Dark Mode', isDark) : localStorage.setItem('Dark Mode', isDark);
+      })
+
+      // verify and load localStorage data{}
+      const saveThemeToLocalStorage = ()=> {
+        let themeStatus = JSON.parse(localStorage.getItem('Dark Mode'));
+        themeStatus ? DOCUMENT.classList.add('isDark') : DOCUMENT.classList.remove('isDark');
+      }
+
+      saveThemeToLocalStorage();
+
+      /* toggle responsive button */
+      TOGGLE_MENU.addEventListener('click', ()=> {
+        TOGGLE_MENU.classList.toggle('anicon__active');
+        NAVBAR_MENU.classList.toggle('menu');
+        NAVBAR_MENU.classList.toggle('navbar__right');
+      })
+
+      NAVBAR_MENU_LINKS.forEach((link)=> {
+        link.addEventListener('click', ()=> {
+          TOGGLE_MENU.classList.toggle('anicon__active');
+          NAVBAR_MENU.classList.toggle('menu');
+          NAVBAR_MENU.classList.toggle('navbar__right');
+        })
+      })
     </script>
 
   </footer>
