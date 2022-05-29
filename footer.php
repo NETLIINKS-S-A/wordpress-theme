@@ -10,7 +10,7 @@
  */
 
 ?>
-
+  <dialog open>Hola</dialog>
 	<footer class="footer">
     <div class="footer__container">
       <div class="margin-t-b-4">
@@ -96,7 +96,7 @@
       /* on submit may appear a modal with prices */
       CONSULTINGPRICE.addEventListener('submit', (e)=> {
         e.preventDefault();
-        alert('debería aparecer la lista de precios en algún lugar');
+        dialog.show();
       });
 
       /* toggle color scheme */
@@ -124,13 +124,18 @@
         NAVBAR_MENU.classList.toggle('navbar__right');
       })
 
+      // prevent show menu on non-responsive screen size
       NAVBAR_MENU_LINKS.forEach((link)=> {
-        link.addEventListener('click', ()=> {
-          TOGGLE_MENU.classList.toggle('anicon__active');
-          NAVBAR_MENU.classList.toggle('menu');
-          NAVBAR_MENU.classList.toggle('navbar__right');
-        })
-      })
+          link.addEventListener('click', ()=> {
+            const $TOOGLE = TOGGLE_MENU.classList.contains('anicon__active');
+
+            if ($TOOGLE == true) { 
+              TOGGLE_MENU.classList.toggle('anicon__active');
+              NAVBAR_MENU.classList.toggle('menu');
+              NAVBAR_MENU.classList.toggle('navbar__right');
+            }
+          });
+        });
     </script>
 
   </footer>

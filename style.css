@@ -597,7 +597,7 @@ section.section {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 68px 28px 10px 28px;
+	padding: 100px 28px 20px 28px;
 }
 
 section.section__dark {
@@ -650,6 +650,7 @@ h1.section__header {
 	-o-border-radius: 5px;
 	padding: 60px;
 	color: var(--white) !important;
+	background-color: var(--neutral-400);
 }
 
 .grid-3 .item-1 {
@@ -674,6 +675,10 @@ h1.section__header {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+}
+
+.grid__applications .item-2 svg.feather.feather-link {
+	color: var(--white) !important;
 }
 
 .grid-3 .item-3 {
@@ -888,6 +893,15 @@ h1.section__header {
 	color: var(--slate-100);
 }
 
+.card__price--title_subtitle {
+	text-transform: lowercase;
+	color: var(--white);
+}
+
+.card__price--title_subtitle::first-letter {
+	text-transform: uppercase;
+}
+
 /* standard price */
 .card__price--standar {
 	background-color: var(--neutral-700);
@@ -1071,6 +1085,11 @@ h1.section__header {
 	.anicon {
 		display: block;
 	}
+
+	p {
+		font-size: 14px !important;
+		line-height: 18px !important;
+	}
 }
 
 @media screen and (max-width: 570px) {
@@ -1118,7 +1137,7 @@ svg.feather.feather-link {
 	position: absolute;
 	top: 10px;
 	right: 10px;
-	color: var(--blue-200);
+	color: var(--blue-300);
 }
 
 /* darkmode */
@@ -1148,4 +1167,4 @@ svg.feather.feather-link {
 	color: var(--slate-100);
 }
 
-.isDark .card__price--standar { background-color: var(--neutral-800); }
+.isDark .card__price--standar { background-color: var(--neutral-900); }
