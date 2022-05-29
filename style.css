@@ -333,8 +333,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 * {
+	padding: 		0;
   margin: 		0;
-  padding: 		0;
   box-sizing: border-box;
   transition: 0.3s all ease;
 }
@@ -478,9 +478,9 @@ h6 {
 	display: flex;
 	width: 100%;
 	max-width: 1322px;
+	padding: 12px;
 	align-items: center;
 	justify-content: space-between;
-	padding: 12px;
 }
 
 .navbar__logo {
@@ -495,6 +495,8 @@ h6 {
 
 .menu {
 	display: flex !important;
+	height: 100vh;
+	width: 100vw;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
@@ -502,14 +504,10 @@ h6 {
 	background-color: var(--teal-500);
 	top: 0;
 	right: 0;
-	height: 100vh;
-	width: 100vw;
 	padding: 20px;
 }
 
 .menu li {
-	padding: 10px 20px;
-	margin: 10px 0;
 	width: 100%;
 	background-color: var(--teal-600);
 	border-radius: 5px;
@@ -518,6 +516,8 @@ h6 {
 	-moz-border-radius: 5px;
 	-ms-border-radius: 5px;
 	-o-border-radius: 5px;
+	padding: 10px 20px;
+	margin: 10px 0;
 }
 
 
@@ -1014,6 +1014,32 @@ h1.section__header {
 	color: var(--neutral-300) !important;
 }
 
+.disclaimer {
+	display: flex;
+	margin: 30px auto;
+	padding: 15px;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	background-color: var(--neutral-50);
+	box-shadow: rgba(0, 0, 0, 0.2) 0 2px 7px;
+}
+
+.disclaimer .disclaimer__icon {
+	display: block;
+	height: 50px;
+	min-height: 50px;
+	width: 50px;
+	min-width: 50px;
+}
+
+.disclaimer p {
+	display: block;
+	outline: 1px solid blue;
+}
+
 @media screen and (max-width: 800px) {
 	.grid-2 {
 		grid-template-columns: 1fr;
@@ -1089,6 +1115,10 @@ h1.section__header {
 	p {
 		font-size: 14px !important;
 		line-height: 18px !important;
+	}
+
+	.disclaimer {
+		background-color: red;
 	}
 }
 
@@ -1168,3 +1198,4 @@ svg.feather.feather-link {
 }
 
 .isDark .card__price--standar { background-color: var(--neutral-900); }
+

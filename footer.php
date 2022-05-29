@@ -11,6 +11,13 @@
 
 ?>
   <dialog open>Hola</dialog>
+  <div class="section">
+    <div class="container">
+      <div class="disclaimer">
+        <i data-feather="shield" class="disclaimer__icon"></i> <p><i>En NETLIINKS nos preocupamos por no comprometer tu privacidad ni la de tu empresa, para más información puedes revisar nuestras <a href="politicasdeprivacidad.html">ploíticas de privacidad</a>.</i></p>
+      </div>
+    </div>
+  </div>
 	<footer class="footer">
     <div class="footer__container">
       <div class="margin-t-b-4">
