@@ -265,6 +265,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   --p-96: 24rem;
 
   /* leadings (line height) */
+  --leading-3: 0.75rem;
+  --leading-4: 1rem;
+  --leading-5: 1.25rem;
   --leading-3:				0.75rem;
   --leading-4:				1rem;
   --leading-5:				1.25rem;
