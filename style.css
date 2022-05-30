@@ -25,7 +25,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /**
 * variables
 */
-
 :root {
   --slate-50: #f7fbfc;
   --slate-100: #f1f5f9;
@@ -332,25 +331,41 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 * {
+<<<<<<< HEAD
   padding:		0;
   margin:		0;
+=======
+  padding: 0;
+  margin: 0;
+>>>>>>> e9c3f875447a17791cf034b509d5e92fa5aebebb
   box-sizing: border-box;
-  transition: 0.3s all ease;
+  transition: all 0.3s all ease;
 }
+
 
 html,
 body {
-  font-family:			'Inter', sans-serif;
+  font-family: 'Inter', sans-serif;
   background-color: var(--neutral-50);
   scroll-behavior: smooth;
 }
 
 a {
+<<<<<<< HEAD
   color:						var(--sky-400);
   font-weight:			var(--font-normal);
   text-decoration:	none;
+=======
+  color: var(--sky-400);
+  font-weight: var(--font-normal);
+  text-decoration: none;
+>>>>>>> e9c3f875447a17791cf034b509d5e92fa5aebebb
 }
-a:hover { color: var(--sky-500); }
+
+a:hover {
+  color: var(--sky-500);
+}
+
 
 h1, h2, h3, h4, h5, h6, b { color: var(--neutral-800); }
 h1 { line-height: var(--leading-10); }
