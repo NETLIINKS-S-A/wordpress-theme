@@ -36,9 +36,10 @@
 
       <div class="footer__navbar">
         <ul>
-          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Servicios</a></li>
           <li><a href="aplicaciones.html">Aplicaciones</a></li>
-          <li><a href="politicasdeprivacidad.html">Privacidad</a></li>
+          <li><a href="politicasdeprivacidad.html">Precios</a></li>
+	  <li><a href="#politicas">Políticas</a></li>
         </ul>
       </div>
 
@@ -70,20 +71,22 @@
       }
 
       /* intersecting objects */
-      const loadSection = (entrys, observer)=> {
-        entrys.forEach((entry)=> {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          } else {
-            entry.target.classList.remove('visible');
-          }
-        })
+      const loadSection = (entry, observer)=> {
+	entrys.forEach((entry)=> {
+	  if (entry.isIntersecting) {
+	    entry.target.classList.add('visible');
+	  } else {
+	    entry.target.classList.remove('visible');
+	  }
+	});
       }
+
       // observer
-      const observer = new IntersectionObserver(loadSection, {
-        root: null,
-        rootMargin: '500px 0px 0px 0px',
-        threshold: 0.5
+
+      const observer2 = new IntersectionObserver(loadSection, {
+	root: null,
+	rootMargin: '500px 0px 0px 0px',
+	threshold: 0.5
       });
 
       observer.observe(section.f);
@@ -94,12 +97,12 @@
       observer.observe(section.sx);
       observer.observe(section.st);
       observer.observe(section.et);
-      
+
       /* animation for navbar */
       window.addEventListener('scroll', ()=> {
         NAVBAR.classList.toggle('navbar__toggled', window.scrollY > 100);
       });
-      
+
       /* on submit may appear a modal with prices */
       CONSULTINGPRICE.addEventListener('submit', (e)=> {
         e.preventDefault();
@@ -136,7 +139,7 @@
           link.addEventListener('click', ()=> {
             const $TOOGLE = TOGGLE_MENU.classList.contains('anicon__active');
 
-            if ($TOOGLE == true) { 
+            if ($TOOGLE == true) {
               TOGGLE_MENU.classList.toggle('anicon__active');
               NAVBAR_MENU.classList.toggle('menu');
               NAVBAR_MENU.classList.toggle('navbar__right');
@@ -144,8 +147,6 @@
           });
         });
     </script>
-
   </footer>
-
 </body>
 </html>

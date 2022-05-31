@@ -268,38 +268,35 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   --leading-3: 0.75rem;
   --leading-4: 1rem;
   --leading-5: 1.25rem;
-  --leading-3:				0.75rem;
-  --leading-4:				1rem;
-  --leading-5:				1.25rem;
-  --leading-6:				1.5rem;
-  --leading-7:				1.75rem;
-  --leading-8:				2rem;
-  --leading-9:				2.25rem;
-  --leading-10:			2.5rem;
-  --leading-none:			1;
-  --leading-tight:		1.25;
-  --leading-snug:			1.375;
-  --leading-normal:	1.5;
-  --leading-relaxed:	1.625;
-  --leading-loose:		2;
+  --leading-6: 1.5rem;
+  --leading-7: 1.75rem;
+  --leading-8: 2rem;
+  --leading-9: 2.25rem;
+  --leading-10: 2.5rem;
+  --leading-none: 1;
+  --leading-tight: 1.25;
+  --leading-snug: 1.375;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+  --leading-loose: 2;
 
   /* font weight */
-  --font-thin:				100;
-  --font-extralight:	200;
-  --font-light:			300;
-  --font-normal:			400;
-  --font-medium:			500;
-  --font-semibold:		600;
-  --font-bold:				700;
-  --font-extrabold:	800;
-  --font-black:			900;
+  --font-thin: 100;
+  --font-extralight: 200;
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+  --font-black: 900;
 
   /* font size */
-  --text-xs:		0.75rem;
-  --text-sm:		0.875rem;
-  --text-base:	1rem;
-  --text-lg:		1.125rem;
-  --text-xl:		1.25rem;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
   --text-2xl:	1.5rem;
   --text-3xl:	1.875rem;
   --text-4xl:	2.25rem;
@@ -310,37 +307,32 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   --text-9xl:	8rem;
 
   /* container */
-  --container-width-sm:	540px;
-  --container-width-md:	720px;
-  --container-width-lg:	960px;
-  --container-width-xl:	1140px;
-  --container-width-2xl:	1320px;
+  --container-width-sm: 540px;
+  --container-width-md: 720px;
+  --container-width-lg: 960px;
+  --container-width-xl: 1140px;
+  --container-width-2xl: 1320px;
 
   /* max breackpoint */
-  --breakpoint-max-width-sm:	578.98px;
-  --breakpoint-max-width-md:	767.98px;
-  --breakpoint-max-width-lg:	991.98px;
-  --breakpoint-max-width-xl:	1199px;
+  --breakpoint-max-width-sm: 578.98px;
+  --breakpoint-max-width-md: 767.98px;
+  --breakpoint-max-width-lg: 991.98px;
+  --breakpoint-max-width-xl: 1199px;
   --breakpoint-max-width-2xl: 1399.98px;
 
   /* min breackpoint */
-  --breakpoint-min-width-sm:	578.98px;
-  --breakpoint-min-width-md:	767.98px;
-  --breakpoint-min-width-lg:	991.98px;
-  --breakpoint-min-width-xl:	1199px;
+  --breakpoint-min-width-sm: 578.98px;
+  --breakpoint-min-width-md: 767.98px;
+  --breakpoint-min-width-lg: 991.98px;
+  --breakpoint-min-width-xl: 1199px;
   --breakpoint-min-width-2xl: 1399.98px;
 
   --grid-gap: 30px;
 }
 
 * {
-<<<<<<< HEAD
-  padding:		0;
-  margin:		0;
-=======
   padding: 0;
   margin: 0;
->>>>>>> e9c3f875447a17791cf034b509d5e92fa5aebebb
   box-sizing: border-box;
   transition: all 0.3s all ease;
 }
@@ -354,15 +346,9 @@ body {
 }
 
 a {
-<<<<<<< HEAD
-  color:						var(--sky-400);
-  font-weight:			var(--font-normal);
-  text-decoration:	none;
-=======
   color: var(--sky-400);
   font-weight: var(--font-normal);
   text-decoration: none;
->>>>>>> e9c3f875447a17791cf034b509d5e92fa5aebebb
 }
 
 a:hover {
@@ -567,7 +553,6 @@ h6 {
   right: 11px;
 }
 
-/* #15b8a6; */
 .navbar__right {
   display: flex;
   align-items: center;
@@ -812,7 +797,7 @@ h1.section__header {
 .footer a { color: var(--neutral-800); }
 .footer a:hover { color: var(--sky-500); }
 
-.footer > hr { 
+.footer > hr {
   border-top: none;
   border-left: none;
   border-right: none;
