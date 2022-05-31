@@ -11,14 +11,8 @@
 
 ?>
   <dialog open>Hola</dialog>
-  <div class="section">
-    <div class="container">
-      <div class="disclaimer">
-        <i data-feather="shield" class="disclaimer__icon"></i> <p><i>En NETLIINKS nos preocupamos por no comprometer tu privacidad ni la de tu empresa, para más información puedes revisar nuestras <a href="politicasdeprivacidad.html">ploíticas de privacidad</a>.</i></p>
-      </div>
-    </div>
-  </div>
-	<footer class="footer">
+  
+  <footer class="footer">
     <div class="footer__container">
       <div class="margin-t-b-4">
         <a href="#" class="footer__logo" onclick="window.open('https://play.google.com/store/apps/developer?id=Netliinks')">
@@ -72,7 +66,7 @@
 
       /* intersecting objects */
       const loadSection = (entry, observer)=> {
-	entrys.forEach((entry)=> {
+	entry.forEach((entry)=> {
 	  if (entry.isIntersecting) {
 	    entry.target.classList.add('visible');
 	  } else {
@@ -83,7 +77,7 @@
 
       // observer
 
-      const observer2 = new IntersectionObserver(loadSection, {
+      const observer = new IntersectionObserver(loadSection, {
 	root: null,
 	rootMargin: '500px 0px 0px 0px',
 	threshold: 0.5
