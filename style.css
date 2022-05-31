@@ -334,13 +334,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 * {
-<<<<<<< HEAD
-  padding:		0;
-  margin:		0;
-=======
   padding: 0;
   margin: 0;
->>>>>>> e9c3f875447a17791cf034b509d5e92fa5aebebb
   box-sizing: border-box;
   transition: all 0.3s all ease;
 }
@@ -354,15 +349,9 @@ body {
 }
 
 a {
-<<<<<<< HEAD
-  color:						var(--sky-400);
-  font-weight:			var(--font-normal);
-  text-decoration:	none;
-=======
   color: var(--sky-400);
   font-weight: var(--font-normal);
   text-decoration: none;
->>>>>>> e9c3f875447a17791cf034b509d5e92fa5aebebb
 }
 
 a:hover {
@@ -435,6 +424,7 @@ h6 {
   text-decoration: none !important;
   color: var(--white) !important;
 }
+
 .header small {
   color: var(--white) !important;
   font-size: 1.875rem;
@@ -1033,7 +1023,7 @@ h1.section__header {
 
 .disclaimer {
   display: flex;
-  margin: 30px auto;
+  margin: 0 auto;
   padding: 15px;
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -1042,6 +1032,7 @@ h1.section__header {
   -o-border-radius: 10px;
   background-color: var(--neutral-50);
   box-shadow: rgba(0, 0, 0, 0.2) 0 2px 7px;
+  width: 100%;
 }
 
 .disclaimer .disclaimer__icon {
@@ -1215,3 +1206,4 @@ svg.feather.feather-link {
 }
 
 .isDark .card__price--standar { background-color: var(--neutral-900); }
+
