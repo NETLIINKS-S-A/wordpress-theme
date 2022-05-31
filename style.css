@@ -361,12 +361,8 @@ h1 { line-height: var(--leading-10); }
 
 p {
   color: var(--neutral-500);
-  line-height: var(--leading-6);
-}
-
-p {
   font-size: 1rem;
-  line-height: 1.5rem;
+  line-height: var(--leading-6);
 }
 
 h6 {
@@ -883,65 +879,6 @@ h1.section__header {
   gap: var(--grid-gap);
 }
 
-/* cards */
-.card__price {
-  padding: 40px;
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
-}
-
-.card__price--demo {	background-color: var(--slate-100); }
-
-.card__price--demo .card__price--content,
-.card__price--demo .card__price--list {
-  color: var(--slate-300);
-}
-
-.card__price--demo .card__price--title,
-.card__price--demo .card__price--subtitle {
-  color: var(--slate-100);
-}
-
-.card__price--title_subtitle {
-  text-transform: lowercase;
-  color: var(--white);
-}
-
-.card__price--title_subtitle::first-letter {
-  text-transform: uppercase;
-}
-
-/* standard price */
-.card__price--standar {
-  background-color: var(--neutral-700);
-}
-
-.card__price--title {
-  color: var(--white);
-  margin-bottom: 5px;
-}
-
-.card__price--subtitle {
-  color: var(--white);
-  margin: 10px 0 0 0;
-}
-
-.card__price--content {
-  color: var(--white);
-  font-size: 16px;
-  font-weight: var(--font-normal);
-  margin-bottom: 5px;
-}
-
-.card__price--list {
-  color: var(--white);
-  list-style: inside;
-  list-style-type: "- ";
-}
-
 .btn {
   display: inline-block;
   padding: 10px 30px;
@@ -1054,6 +991,64 @@ h1.section__header {
   display: block;
 }
 
+/**======================
+ *   tarjeta de precios
+ *========================**/
+
+.card__price {
+  background-color: var(--color-500);
+  padding: 40px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+/* TARJETAS: ajustes generales */
+/* títulos */
+.card__price--title {
+  color: var(--neutral-100);
+}
+
+.card__price--subtitle {
+  color: var(--neutral-100);
+  text-transform: uppercase;
+  letter-spacing: 0.075rem;
+}
+
+/* contenido */
+.card__price--content {
+  color: var(--neutral-50);
+}
+
+/* listas */
+.card__price--list {
+  color: var(--slate-50);
+  list-style: inside;
+  margin: 5px 0 10px 0;
+}
+
+/* especificidad de tarjetas */
+/* DEMO */
+.card__price--demo {
+  background-color: var(--slate-500);
+}
+
+/* Estándar */
+.card__price--standard {
+  background-color: var(--neutral-700);
+  height: fit-content;
+}
+/*==== END OF TARJETA DE PRECIOS ====*/
+
+
+ /**=======================
+ * *       INFO
+ *  Esta sección omodifica el aspecto de la página para
+ *  adaptarse a pantallas con resoluciones igual o menores
+ *  a 800px.
+ *========================**/
 @media screen and (max-width: 800px) {
   .grid-2 {
     grid-template-columns: 1fr;
@@ -1117,6 +1112,12 @@ h1.section__header {
   }
 }
 
+/**=======================
+ * *       INFO
+ *  Esta sección omodifica el aspecto de la página para
+ *  adaptarse a pantallas con resoluciones igual o menores
+ *  a 700px.
+ *========================**/
 @media screen and (max-width: 700px) {
   /* MENÚ RESPONSIVO */
   .navbar__right {
@@ -1137,6 +1138,12 @@ h1.section__header {
   }
 }
 
+/**=======================
+ * *       INFO
+ *  Esta sección omodifica el aspecto de la página para
+ *  adaptarse a pantallas con resoluciones igual o menores
+ *  a 570px.
+ *========================**/
 @media screen and (max-width: 570px) {
   .input__group {
     display: block;
@@ -1150,18 +1157,37 @@ h1.section__header {
   }
 }
 
+/**=======================
+ * *       INFO
+ *  Esta sección omodifica el aspecto de la página para
+ *  adaptarse a pantallas con resoluciones igual o menores
+ *  a 530px.
+ *========================**/
+
 @media screen and (max-width: 530px ) {
   div.grid-3 div.item-1,
   div.grid-3 div.item-2,
   div.grid-3 div.item-3 { padding: 20px !important; }
 }
 
+/**=======================
+ * *       INFO
+ *  Esta sección omodifica el aspecto de la página para
+ *  adaptarse a pantallas con resoluciones igual o menores
+ *  a 452px.
+ *========================**/
 @media screen and (max-width: 452px ) {
   .grid-2 .image {
     z-index: -1;
   }
 }
 
+/**=======================
+ * *       INFO
+ *  Esta sección omodifica el aspecto de la página para
+ *  adaptarse a pantallas con resoluciones igual o menores
+ *  a 410px.
+ *========================**/
 @media screen and (max-width: 410px) {
   .grid__image {
     z-index: -9;
@@ -1177,6 +1203,11 @@ h1.section__header {
   }
 }
 
+/**=======================
+ * *       LINKS
+ *  Modifica el aspecto de los enlaces de las tarjetas de
+ *  aplicaciones.
+ *========================**/
 svg.feather.feather-link {
   position: absolute;
   top: 10px;
@@ -1184,7 +1215,9 @@ svg.feather.feather-link {
   color: var(--blue-300);
 }
 
-/* darkmode */
+/**============================================
+ *               MODO OBSCURO
+ *=============================================**/
 .isDark {
   background-color: var(--neutral-800);
 }
@@ -1201,17 +1234,21 @@ svg.feather.feather-link {
   background-color: var(--neutral-900);
 }
 
-.card__price--demo {
-  background-color: var(--slate-500);
+.isDark .card__price--standard { background-color: var(--neutral-900); }
+
+.isDark .disclaimer {
+  background-color: var(--neutral-900);
 }
 
-.card__price--demo .card__price--content, .card__price--demo .card__price--list {
-  color: var(--slate-300);
+.isDark .disclaimer svg.feather.feather-shield {
+  color: var(--green-400);
 }
 
-.isDark .card__price--demo .card__price--title, .isDark .card__price--demo .card__price--subtitle {
-  color: var(--slate-100);
+.isDark .disclaimer p {
+  color: var(--green-200);
 }
 
-.isDark .card__price--standar { background-color: var(--neutral-900); }
-
+.isDark .disclaimer a {
+  color: var(--green-500);
+  font-weight: var(--font-bold);
+}
