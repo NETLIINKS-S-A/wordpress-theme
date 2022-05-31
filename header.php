@@ -31,7 +31,7 @@
   <meta property="twitter:description" content="Offering our services for infividual or groups.">
   <meta property="twitter:image" content="img/prev_bookmark.png">
   <meta property="twitter:card" content="summary_large_image">
-	
+
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<link rel="preconnect" href="https://fonts.googleapis.com"> 
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
