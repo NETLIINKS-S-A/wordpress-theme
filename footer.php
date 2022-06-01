@@ -9,6 +9,8 @@
  * @package _s
  */
 
+ include('register.php');
+
 ?>
   <dialog open>Hola</dialog>
   
@@ -45,7 +47,7 @@
     </div>
     <script>feather.replace();</script>
     <script>
-      const DOCUMENT = document.querySelector('body');
+      const $DOCUMENT = document.querySelector('body');
       const NAVBAR = document.querySelector('.navbar');
       const TOGGLE_MENU = document.getElementById('show-menu');
       const NAVBAR_MENU = document.querySelector('.navbar__right');
@@ -78,9 +80,9 @@
       // observer
 
       const observer = new IntersectionObserver(loadSection, {
-	root: null,
-	rootMargin: '500px 0px 0px 0px',
-	threshold: 0.5
+        root: null,
+        rootMargin: '500px 0px 0px 0px',
+        threshold: 0.5
       });
 
       observer.observe(section.f);
@@ -97,18 +99,12 @@
         NAVBAR.classList.toggle('navbar__toggled', window.scrollY > 100);
       });
 
-      /* on submit may appear a modal with prices */
-      CONSULTINGPRICE.addEventListener('submit', (e)=> {
-        e.preventDefault();
-        dialog.show();
-      });
-
       /* toggle color scheme */
       THEME_TOGGLE.addEventListener('click', ()=> {
-        DOCUMENT.classList.toggle('isDark');
+        $DOCUMENT.classList.toggle('isDark');
 
         // save theme status to localstorage
-        const isDark = DOCUMENT.classList.contains('isDark');
+        const isDark = $DOCUMENT.classList.contains('isDark');
 
         isDark ? localStorage.setItem('Dark Mode', isDark) : localStorage.setItem('Dark Mode', isDark);
       })
@@ -116,7 +112,7 @@
       // verify and load localStorage data{}
       const saveThemeToLocalStorage = ()=> {
         let themeStatus = JSON.parse(localStorage.getItem('Dark Mode'));
-        themeStatus ? DOCUMENT.classList.add('isDark') : DOCUMENT.classList.remove('isDark');
+        themeStatus ? $DOCUMENT.classList.add('isDark') : $DOCUMENT.classList.remove('isDark');
       }
 
       saveThemeToLocalStorage();
