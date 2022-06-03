@@ -11,7 +11,22 @@ if (isset($_POST['register'])) {
 
     if ($result) {
       ?>
-          <div class="modal__container"></div>
+        <div class="modal__container" id="modal">
+          <div class="modal__window">
+            <h1 class="modal__title">Precio</h1>
+            <h1 class="modal__price hero">$50
+              <small>mensuales</small>
+            </h1>
+            <p class="modal__content">
+              
+            </p>
+            <div class="input__group">
+              <button class="btn btn__success">Contratar</button>
+              <button class="btn btn__info" id="closeModal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+        
       <?php
     } else {
         ?>

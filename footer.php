@@ -12,8 +12,6 @@
  include('register.php');
 
 ?>
-  <dialog open>Hola</dialog>
-  
   <footer class="footer">
     <div class="footer__container">
       <div class="margin-t-b-4">
@@ -136,6 +134,26 @@
             }
           });
         });
+
+        function modal() {
+            const closeModal = document.getElementById('closeModal');
+
+            const closingModal = ()=> {
+              closeModal.addEventListener('click', ()=> {
+                const modal = document.getElementById('modal');
+                modal.classList.add('modal__isHidden');
+              })
+            }
+
+            if (closeModal) {
+              closingModal();
+            } else {
+              console.log('No existe el objeto "closeModal"');
+            }
+
+          }
+
+          modal();
     </script>
   </footer>
 </body>

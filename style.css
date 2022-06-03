@@ -924,6 +924,19 @@ h1.section__header {
   color: var(--green-50);
 }
 
+.btn__danger {
+  background-color: var(--red-500);
+  color: var(--white);
+}
+.btn__danger:hover {
+  background-color: var(--red-400);
+  color: var(--white);
+}
+.btn__danger:active {
+  background-color: var(--red-600);
+  color: var(--red-50);
+}
+
 .btn__invert {
   background-color: var(--green-700) !important;
   color: var(--green-400) !important;
@@ -1039,10 +1052,74 @@ h1.section__header {
 /* Estándar */
 .card__price--standard {
   background-color: var(--neutral-700);
-  height: fit-content;
 }
 /*==== END OF TARJETA DE PRECIOS ====*/
 
+.modal__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 20px;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(6px) saturate(20%);
+  -webkit-backdrop-filter: blur(6px) saturate(20%);
+  z-index: 9999;
+}
+
+.modal__window {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  background-color: var(--neutral-100);
+  padding: 16pt;
+  border-radius: 8pt;
+  -webkit-border-radius: 8pt;
+  -moz-border-radius: 8pt;
+  -ms-border-radius: 8pt;
+  -o-border-radius: 8pt;
+}
+
+.modal__window h1 {
+  text-align: center;
+}
+
+.modal__title {
+  color: var(--neutral-800);
+  margin: 0px auto 20px auto;
+}
+
+.modal__price {
+  font-size: var(--text-8xl);
+  font-weight: 900;
+  color: var(--slate-400);
+}
+
+.modal__price small {
+  display: block;
+  font-size: var(--text-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.034rem;
+  font-weight: var(--font-medium);
+  padding: 10px 10px;
+  color: var(--neutral-700);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  margin: 10px 0 10px 0;
+}
+
+.modal__window .input__group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
  /**=======================
  * *       INFO
@@ -1153,6 +1230,12 @@ h1.section__header {
     width: 100%;
     margin-top: 10px;
   }
+
+  .modal__window .input__group {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
 }
 
 /**=======================
@@ -1250,4 +1333,24 @@ svg.feather.feather-link {
 .isDark .card__policies a {
   color: var(--green-500);
   font-weight: var(--font-bold);
+}
+
+.isDark .modal__window {
+  background-color: var(--neutral-800);
+}
+
+.isDark .modal__title {
+  color: var(--neutral-300);
+}
+
+.isDark .modal__price {
+  color: var(--neutral-100);
+}
+
+.isDark .modal__price small {
+  color: var(--neutral-400);
+}
+
+.modal__isHidden {
+  display: none !important;
 }
